@@ -184,7 +184,7 @@ placement-tracker/
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+I welcome contributions! Here's how you can help:
 
 1. **Fork the repository**
 2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
@@ -203,14 +203,6 @@ We welcome contributions! Here's how you can help:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- **Shadcn/ui** - For the beautiful, accessible UI components
-- **@dnd-kit** - For the smooth drag and drop functionality
-- **Tailwind CSS** - For the utility-first CSS framework
-- **Lucide** - For the consistent, beautiful icons
-- **React Team** - For the amazing React framework
-
 ## 📞 Contact & Support
 
 - **Created with ❤️ for college students**
@@ -221,4 +213,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if it helped you track your placement journey!**
 
-*Built for students, by students. Good luck with your placements! 🚀*
+*Built for students, by student. Good luck with your placements! 🚀*
