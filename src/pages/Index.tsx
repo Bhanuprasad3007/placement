@@ -95,7 +95,7 @@ const Index = () => {
 
   // Save companies to localStorage whenever companies change
   useEffect(() => {
-    if (user && companies.length > 0) {
+    if (user && companies.length >= 0) {
       // Retrieve existing user companies
       const allUserCompanies = JSON.parse(localStorage.getItem('placement-tracker-user-companies') || '{}');
       
@@ -107,20 +107,13 @@ const Index = () => {
     }
   }, [companies, user]);
 
-  // Save user to localStorage whenever user changes
-  useEffect(() => {
-    if (user) {
-      localStorage.setItem('placement-tracker-user', JSON.stringify(user));
-    }
-  }, [user]);
-
   const handleLogin = (userData: User) => {
     setUser(userData);
     
     // Save the exact user details to localStorage
     localStorage.setItem('placement-tracker-user', JSON.stringify(userData));
     
-    // Retrieve user-specific companies or start with empty array
+    // Retrieve user-specific companies
     const allUserCompanies = JSON.parse(localStorage.getItem('placement-tracker-user-companies') || '{}');
     const userCompanies = allUserCompanies[userData.email] || [];
     
@@ -130,7 +123,7 @@ const Index = () => {
   const handleLogout = () => {
     setUser(null);
     localStorage.removeItem('placement-tracker-user');
-    setCompanies([]); // Start with empty array when logging out
+    setCompanies([]); // Temporarily clear view, but companies remain in storage
   };
 
   const handleAddCompany = (newCompanyData: Omit<Company, 'id'>) => {

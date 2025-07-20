@@ -71,7 +71,8 @@ export function LoginPage({ onLogin }: LoginProps) {
         email: formData.email,
         password: formData.password,
         college: formData.college,
-        branch: formData.branch
+        branch: formData.branch,
+        createdAt: new Date().toISOString() // Add creation timestamp
       };
 
       const updatedUsers = [...storedUsers, newUser];
